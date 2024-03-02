@@ -1,6 +1,7 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
 <p>
+AÑo 2024
 UNIVERSIDAD NACIONAL DE INGENIERÍA <br>
 FACULTAD DE INGENIERÍA ECONÓMICA, ESTADÍSTICA Y CIENCIAS SOCIALES <br>
 MAESTRÍA EN DATA SCIENCE <br>
