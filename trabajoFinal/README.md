@@ -307,6 +307,20 @@ Include:
 
 ## Terminología
 
+**Raleo de uva**: Práctica agrícola en el cultivo de la vid. Consiste en la eliminación selectiva de ciertas bayas o racimos de uva en la planta, con el objetivo de mejorar la calidad y la cantidad de la cosecha final. Esta técnica se realiza durante el crecimiento de la uva, generalmente en las primeras etapas de desarrollo de la fruta.
+
+El propósito principal del raleo es reducir la carga de la planta, es decir, el número de racimos o la cantidad de uvas que la vid debe madurar. Esto permite que los racimos restantes reciban más nutrientes, agua y luz solar, lo que a su vez promueve un desarrollo más completo y una mejor calidad de la fruta. Al eliminar ciertos racimos o bayas, se logra una distribución más uniforme de los recursos disponibles para la planta, lo que resulta en uvas más grandes, sabrosas y con mejor concentración de azúcares y otros compuestos importantes para la calidad del vino.
+
+El raleo de uva se realiza de manera manual o mecánica, dependiendo de la escala de producción y la disponibilidad de recursos. En muchos viñedos de alta calidad, el raleo manual es preferido, ya que permite una selección más precisa y delicada de las uvas a eliminar, asegurando que solo se retiren aquellas que afecten negativamente la calidad final del producto. Sin embargo, en grandes viñedos comerciales, el raleo mecánico puede ser más práctico y rentable, aunque puede ser menos preciso.
+
+**Operario de raleo de uva**: Un operario de raleo de uva es un trabajador agrícola especializado en llevar a cabo la práctica de raleo de uva en los viñedos. Su función principal es realizar la selección y eliminación de racimos o bayas de uva de manera manual, siguiendo las instrucciones específicas del viticultor o encargado del viñedo.
+
+Los operarios de raleo de uva son responsables de identificar y eliminar los racimos o bayas que no tienen el tamaño, la madurez o la calidad adecuada para contribuir a una cosecha de alta calidad. Esto puede implicar retirar racimos excesivamente pequeños, dañados por enfermedades o plagas, inmaduros o sobreexpuestos al sol, así como ajustar la carga de la planta para mejorar la distribución de los recursos disponibles.
+
+Estos trabajadores deben tener habilidades y experiencia en el manejo delicado de las uvas, así como un buen ojo para detectar las características deseables o no deseables en la fruta. Además, es importante que sigan las indicaciones del viticultor o supervisor para garantizar que el raleo se realice de acuerdo con los estándares de calidad y las necesidades específicas de la viña.
+
+En muchos casos, el trabajo de raleo de uva se realiza a mano, lo que requiere paciencia, precisión y resistencia física por parte del operario. Este trabajo es fundamental para asegurar una cosecha de uva de alta calidad, ya que el raleo adecuado contribuye a la salud de las plantas, la uniformidad de la maduración y la concentración de sabores en las uvas restantes, lo que finalmente se refleja en la calidad del vino producido. 
+
 # 📚 Referencias
 
 - Nombre del autor, **Título del artículo o recurso**, enlace o DOI.
