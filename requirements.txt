@@ -1,3 +1,5 @@
 # Sesión 10
 networkx
 seaborn
+# Trabajo final
+openpyxl
