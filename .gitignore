@@ -147,3 +147,7 @@ TO-DO.md
 
 # Presentación de la parte 1 del trabajo final
 trabajoFinal/references/presentacion-parte1.pdf
+
+# Bases de datos de las carpetas "interim" y "processed"
+trabajoFinal/data/interim/
+trabajoFinal/data/processed/
