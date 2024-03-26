@@ -90,14 +90,14 @@ Parte 1, proyecto de segmentación.
 
 *Nota.* Se facilitan:
 * una presentación (no compartida en este repositorio por razones de confidencialidad) y
-* [código R](./notebooks/codigoR.html),<br>
+* [código R](./trabajoFinal/parte1/references/codigoR.html),<br>
 ambos elaborados por el docente, que servirán de guía para la obtención de resultados por los alumnos.
 
-Parte 2, dos ejemplos independientes de aprendizaje no supervisado:
-* Uso de grafos para segmentación.
-* Uso de modelos generativos adversarios para generación de contenido.
+Parte 2, dos ejemplos independientes de uso de grafos para segmentación:
+* Corte normalizado
+* grabCut
 
-*Nota.* Se facilita un [notebook Python](./notebooks/notebookPython.ipynb) que contiene ambos ejemplos.
+*Nota.* Se facilita un [notebook Python](./trabajoFinal/parte2/notebookPython.ipynb) que contiene ambos ejemplos.
 
 ### Indicaciones
 * Fecha de entrega: 25 de marzo del 2024.
@@ -109,7 +109,7 @@ Parte 2, dos ejemplos independientes de aprendizaje no supervisado:
 
   *Nota.* Ambos entregables deberán ser enviados en un mismo correo con el asunto `KPG_CD_Sec1` en caso mío.
 * Datos:
-  * Para la Parte 1, [data-parte1](./data/raw/data-parte1.csv).
+  * Para la Parte 1, [data-parte1](./trabajoFinal/parte1/data/raw/data-parte1.csv).
   * Para la parte 2, datos incluídos en el notebook facilitado.
 
 # Bibliografía
