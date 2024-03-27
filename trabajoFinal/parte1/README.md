@@ -1,6 +1,6 @@
 ![logo](https://github.com/kevinPerezGarcia/kevinPerezGarcia/blob/main/logo.png)
 
-<h1>SEGMENTACIÓN DE OPERARIOS DE RALEO DE UVA - CAMPAÑA 2019 Y 2020</h1>
+<h1>SEGMENTACIÓN DE OPERARIOS DE RALEO DE UVA - REGIONES PIURA E ICA</h1>
 
 Descripción del Proyecto de Ciencia de Datos
 
@@ -8,7 +8,7 @@ Descripción del Proyecto de Ciencia de Datos
 
 [@Kevin Perez Garcia](https://www.linkedin.com/in/kevinperezgarcia)
 
-🤝 ¡Las contribuciones, los problemas y las solicitudes de funciones son bienvenidos!
+🤝 ¡Las observaciones, las recomendaciones y las contribuciones son bienvenidas!
 
 📞 Para más consultas o colaboraciones, comuníquese a `econ.perez.garcia.k@gmail.com`.
 
@@ -55,29 +55,14 @@ _**Nota.**_ Antes de leer este reporte, se recomienda revisar la sección [Anexo
   - [Diccionario de variables facilitado](#diccionario-de-variables-facilitado)
   - [Descripción de los datos](#descripción-de-los-datos)
   - [Descripción de la unidad de análisis](#descripción-de-la-unidad-de-análisis)
-  - [Sobre las variables](#sobre-las-variables)
-    - [Diccionario de variables](#diccionario-de-variables)
-      - [Diccionario de variables después de la limpieza de datos](#diccionario-de-variables-después-de-la-limpieza-de-datos)
-      - [Diccionario de variables después de la ingeniería de variables](#diccionario-de-variables-después-de-la-ingeniería-de-variables)
-      - [Diccionario de variables usadas en el modelamiento](#diccionario-de-variables-usadas-en-el-modelamiento)
-    - [Notas sobre las Variables](#notas-sobre-las-variables)
-    - [Relaciones lógicas entre la variable objetivo y cada predictor](#relaciones-lógicas-entre-la-variable-objetivo-y-cada-predictor)
-  - [Tamaño de la base de datos](#tamaño-de-la-base-de-datos)
-  - [Supuestos](#supuestos)
 - [🔍 Metodología](#-metodología)
-  - [Enmarcación del problema en el contexto de machine learning](#enmarcación-del-problema-en-el-contexto-de-machine-learning)
-  - [Medida de desempeño](#medida-de-desempeño)
 - [📈 Resultados](#-resultados)
-  - [Resultados del EDA](#resultados-del-eda)
-    - [Resultados del Análisis de Perfil](#resultados-del-análisis-de-perfil)
 - [📈 Conclusiones](#-conclusiones)
 - [Trabajo Futuro](#trabajo-futuro)
 - [Anexos](#anexos)
   - [Planta de vid](#planta-de-vid)
   - [Ciclo de cultivo de la vid](#ciclo-de-cultivo-de-la-vid)
   - [Terminología](#terminología)
-- [📚 Referencias](#-referencias)
-- [🔄 Registro de cambios](#-registro-de-cambios)
 
 # Introducción
 
@@ -205,134 +190,13 @@ Así, sólo se cuenta con 40 variables a procesar.
 
 ## Descripción de la unidad de análisis
 
-La unidad de análisis es un área o zona de $625~m^2$ dividida en 25 celdas de $5~m^2$ ($5~m$ x $5~m$) cada una, con la siguiente distribución:
 
-| 1 	| 6  	| 11     	| 16 	| 21 	|
-|---	|----	|--------	|----	|----	|
-| 2 	| 7  	| 12     	| 17 	| 22 	|
-| 3 	| 8  	| *13*    | 18 	| 23 	|
-| 4 	| 9  	| 14     	| 19 	| 24 	|
-| 5 	| 10 	| 15     	| 20 	| 25 	|
-
-
- Si el área presentó deslizamiento de tierra, la celda 13 es la ubicación de dicho deslizamiento y las otras celdas representan el resto del área. Si el área no presentó deslizamiento de tierra, ninguna celda es la ubicación de deslizamiento de tierra.
-
- Cada muestra u observación es independiente de las otras; es decir, no son áreas aledañas.
-
-## Sobre las variables
-
-### Diccionario de variables
-
-#### Diccionario de variables después de la limpieza de datos
-
-![image.png](attachment:image.png)
-
-#### Diccionario de variables después de la ingeniería de variables
-
-![image.png](attachment:image.png)
-
-#### Diccionario de variables usadas en el modelamiento
-
-![image.png](attachment:image.png)
-
-### Notas sobre las Variables
-
-**Respecto a la variables `conglome`, `vivienda`, `hogar`, `codperso`:**
-
-Estas son variables que permiten identificar al hogar y el miembro del hogar.
-  
-**Respecto a la variable `pobreza`:**
-
-Esta se refiere a la pobreza monetaria que toma el valor de 1 si el ingreso es menor al costo de una canasta básica de consumo de alimentos y no alimentos, que para el año 2022 asciende a S/ 415 mensual por habitante, es decir, para una familia de cuatro integrantes dicho monto asciende a S/ 1 660 mensual. Toma el valor de 0 en caso contrario.
-
-**Respecto a la variable `casado`:**
-
-Esta variable toma el valor de 1 si el miembro del hogar es conviviente o casado; mientras que toma el valor de 0 si el miembro del hogar es soltero, viudo o divorciado.
-
-**Respecto a la variable `educacion`:**
-
-Esta variable mide el grado de instrucción del miembro del hogar.
-
-### Relaciones lógicas entre la variable objetivo y cada predictor
-
-**`deslizamiento` vs `exposicion`**
-
-Para comprender la relación entre el predictor "exposición" y la variable objetivo "target" en el contexto que proporcionas (si hubo deslizamiento o no), necesitamos considerar cómo los factores geológicos y topográficos, como la exposición de la pendiente, pueden influir en la estabilidad del terreno y por tanto en la probabilidad de un deslizamiento.
-
-El predictor "exposición" en este caso representa la exposición de la pendiente en grados, lo cual puede interpretarse como la orientación de la pendiente respecto a los puntos cardinales. La exposición de la pendiente puede afectar varios aspectos que influyen en la estabilidad de la pendiente:
-
-1. **Clima**: La dirección de la pendiente puede determinar la cantidad de insolación que recibe, lo que afecta a su vez la humedad del suelo y la vegetación. Por ejemplo, las pendientes que miran al sur en el hemisferio norte pueden estar más secas debido a una mayor exposición al sol, lo que podría influir en la cohesión del suelo.
-
-2. **Erosión**: Dependiendo de la orientación, algunas pendientes pueden estar más protegidas o expuestas a factores erosivos como el viento y la lluvia. Una pendiente que enfrenta la dirección predominante de las tormentas puede ser más propensa a la erosión.
-
-3. **Temperatura**: Las pendientes con cierta exposición pueden experimentar diferencias significativas en la temperatura, lo que puede afectar la congelación y el deshielo y, por tanto, la estabilidad del terreno.
-
-4. **Vegetación**: La orientación de la pendiente influye en el tipo y la densidad de la vegetación, lo que a su vez afecta la retención de agua y la estabilidad del suelo.
-
-En un análisis de datos para evaluar la relación entre "exposición" y la probabilidad de deslizamiento ("target"), podríamos esperar encontrar que ciertas orientaciones de la pendiente están asociadas con una mayor o menor frecuencia de deslizamientos. Esto podría ser debido a los factores mencionados anteriormente y probablemente a la interacción con otros factores como el tipo de suelo (tpgeologia), la pendiente del terreno, y los índices relacionados con la humedad (iht) y la erosión (factorlp).
-
-Para establecer una relación cuantitativa, se realizaría un análisis estadístico, por ejemplo, usando modelos de regresión logística si "target" es una variable binaria (sí/no de deslizamiento). En este modelo, podríamos estimar cómo el cambio en el grado de exposición afecta la probabilidad logarítmica de que ocurra un deslizamiento, manteniendo constantes otros factores. Si encontramos que el coeficiente de "exposición" es estadísticamente significativo y positivo, esto indicaría que a medida que aumenta la exposición de la pendiente, también lo hace la probabilidad de un deslizamiento, todo lo demás constante. Si el coeficiente es negativo, indicaría que a mayor exposición, menor es la probabilidad de un deslizamiento.
-
-## Tamaño de la base de datos
-
-FYI
-
-- Compruebe cuánto espacio ocupará.
-- Cree un espacio de trabajo con suficiente espacio de almacenamiento.
-- Comprobar el tamaño y tipo de datos (series temporales, muestrales, geográficos, etc.).
-
-## Supuestos
-
-FYI
-
-- Enumere los supuestos que usted u otros han hecho hasta ahora.
-- Verifiqe los supuestos si es posible.
 
 # 🔍 Metodología
 
-## Enmarcación del problema en el contexto de machine learning
-
-FYI
-
-- Supervisado, no supervisado, semisupervisada, autosupervisada, o de refuerzo
-- ¿regresión, clasificación, o algo más?
-- ¿Debería utilizar técnicas de aprendizaje por lotes o de aprendizaje en línea?
-- ¿Qué algoritmos seleccionará?
-
-## Medida de desempeño
-
-FYI
-
-- ¿Cómo se debe medir el desempeño?
-- ¿La medida de desempeño está alineado con el objetivo comercial?
-- ¿Cuál sería el desempeño mínimo necesario para alcanzar el objetivo del negocio?
-
 # 📈 Resultados
 
-Key findings, visualizations, and insights derived from the project.
-
-## Resultados del EDA
-
-### Resultados del Análisis de Perfil
-
-- El 22.5% de los encuestados peruanos adultos se encuentran en una situación de pobreza monetaria.
-- La mayor cantidad de pobres se ubican en la región Sierra, a diferencia de los no pobres que se ubican en la región Costa.
-- Distribución bastante equilibrada respecto al área de residencia, la pobreza parece distribuirse de manera equitativa entre las áreas urbanas y rurales, ya que ambas tienen porcentajes similares de personas en situación de pobreza.
-- Una proporción significativamente mayor de personas en situación de no pobreza reside en áreas urbanas. Esto podría indicar una concentración de recursos, servicios y oportunidades en las zonas urbanas que facilitan una mejor calidad de vida o condiciones económicas.
-- Top 5 de departamentos con la mayor cantidad de personas pobres: Lima, Cajamarca, Loreto, Piura, Puno.
-- Importante disparidad en el acceso al agua potable entre los pobres y no pobres: Un 70.53% de las personas que no están en situación de pobreza tienen acceso a agua potable, mientras que solo el 47.68% de las personas en situación de pobreza cuentan con dicho servicio.
-- Predominancia del no acceso al agua potable entre los pobres: Un 52.32% de las personas en situación de pobreza no tienen acceso a agua potable, lo que refleja una importante carencia básica en este grupo.
-
 # 📈 Conclusiones
-
-Comment on your findings here and provide a summary. 
-
-Include: 
-1. The model you would choose to deploy (if any) 
-2. A table of results of the different models you tested
-3. Model performance across different subsets (ie, geographies, customer offering, etc.)
-  * Should we not deploy for certain subsets/groups?
-4. Steps on how to maintain and update the model in production in a way stakeholders can understand
 
 # Trabajo Futuro
 
@@ -399,12 +263,3 @@ Los operarios de raleo de uva son responsables de identificar y eliminar los rac
 Estos trabajadores deben tener habilidades y experiencia en el manejo delicado de las uvas, así como un buen ojo para detectar las características deseables o no deseables en la fruta. Además, es importante que sigan las indicaciones del viticultor o supervisor para garantizar que el raleo se realice de acuerdo con los estándares de calidad y las necesidades específicas de la viña.
 
 En muchos casos, el trabajo de raleo de uva se realiza a mano, lo que requiere paciencia, precisión y resistencia física por parte del operario. Este trabajo es fundamental para asegurar una cosecha de uva de alta calidad, ya que el raleo adecuado contribuye a la salud de las plantas, la uniformidad de la maduración y la concentración de sabores en las uvas restantes, lo que finalmente se refleja en la calidad del vino producido. 
-
-# 📚 Referencias
-
-- Nombre del autor, **Título del artículo o recurso**, enlace o DOI.
-
-# 🔄 Registro de cambios
-
-- **[Fecha]**: Lanzamiento inicial.
-- **[Fecha]**: Nueva característica X añadida.
